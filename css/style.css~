@@ -1,0 +1,92 @@
+body{
+	font-family:Calibri, sans-serif;
+	font-size:14px;
+	width:800px;
+	margin:auto;
+}
+
+#todrag{
+	list-style-type: none;
+	padding:0;
+	margin:0;
+	padding-bottom:5px;
+}
+
+h1, h2, h3, h4, h5, h6{ text-align:center; }
+
+/*
+ * TODO : remove ?
+img{ 
+	display:block;
+	margin:auto;
+}
+*/
+
+/*
+ * Let's tune our draggable items !
+ */
+[draggable=true]{
+	cursor: move;
+	padding:1em;
+
+	/* TODO : decline */
+	-ms-user-select:none;
+
+	border-radius:2px;
+
+	border:1px black solid;
+	margin-bottom:0.1em;
+	display:block;
+}
+[draggable=true]:hover{
+	box-shadow:0 0 5px green;
+}
+
+#mylist, [dropzone]{
+	width:90%;
+	margin:auto;
+	border:2px gray solid;
+	border-radius:2px;
+}
+
+/* Soft background transition */
+[draggable=true], [dropzone]{
+	transition:
+		box-shadow linear 0.2s,
+		background-color linear 0.2s,
+		color linear 0.2s;
+}
+
+[dropzone]{
+	color:gray;
+	font-style:italic;
+	font-size:1.5rem;
+	text-align:center;
+	border:2px gray dashed;
+	padding:1em 0;
+}
+#mylist img, #mylist span{
+	display:block;
+	padding:1em;
+}
+#mylist img{
+	margin:auto;
+}
+/*
+ * TODO : remove ?
+[dropzone]:hover{
+	background-color:red;
+}
+
+*/
+.hidden{
+	visibility:hidden;
+}
+.w25{ width:25%; }
+.w50{ width:50%; }
+.fleft{
+	float:left;
+}
+.fright{
+	float:right;
+}

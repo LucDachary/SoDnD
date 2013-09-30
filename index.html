@@ -1,9 +1,32 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-  <title>Drag & Drop</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<title>Drag & Drop</title>
 </head>
 <body>
 
+<h1>So drag & drop</h1>
+<div id="todrag" class="w25 fleft">
+	<span draggable="true">Papple ?</span>
+	<span draggable="true">Ga-ga-ooh-la-la !</span>
+	<img draggable="true" src="img/minion_gaga.jpg" alt="Minion Gaga"/>
+	<img draggable="true" src="img/minion_apple.jpg" alt="Minion with an apple on the head"/>
+</div>
+
+<div class="w50 fleft">
+	<h2>Lâchez ici &darr;</h2>
+	<div id="mydropzone" dropzone="move">
+	</div>
+</div>
+
+<div class="w25 fright">
+	<div id="mylist" class="hidden">
+
+	</div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
