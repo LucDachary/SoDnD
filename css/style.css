@@ -15,22 +15,11 @@ body{
 h1, h2, h3, h4, h5, h6{ text-align:center; }
 
 /*
- * TODO : remove ?
-img{ 
-	display:block;
-	margin:auto;
-}
-*/
-
-/*
  * Let's tune our draggable items !
  */
 [draggable=true]{
 	cursor: move;
 	padding:1em;
-
-	/* TODO : decline */
-	-ms-user-select:none;
 
 	border-radius:2px;
 
@@ -72,21 +61,9 @@ img{
 #mylist img{
 	margin:auto;
 }
-/*
- * TODO : remove ?
-[dropzone]:hover{
-	background-color:red;
-}
 
-*/
-.hidden{
-	visibility:hidden;
-}
+.hidden{ visibility:hidden; }
 .w25{ width:25%; }
 .w50{ width:50%; }
-.fleft{
-	float:left;
-}
-.fright{
-	float:right;
-}
+.fleft{	float:left; }
+.fright{ float:right; }

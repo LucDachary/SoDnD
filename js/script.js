@@ -1,10 +1,10 @@
 /*
- * TODO : reformuler
- * Set this boolean to true when a draggable element has successfuly
- * been dropped. Then we know we can remove the original element.
+ * Because "dragend" is called both if you drop the item on the dropzone
+ * or if you drop the item anywhere else, we have to mind if we can
+ * remove it.
  *
- * When catching dragend event, if it still is false, then the draggable
- * element has has not been moved successfuly.
+ * When the item is successfuly dropped on the dropzone, dnd_successful
+ * is true and we can remove it safely.
  */
 dnd_successful = false;
 
@@ -13,24 +13,13 @@ dnd_successful = false;
  * Most of the browser have already set <img> DnD events up, but we
  * override them to define a specific behavior.
  */
-//TODO : check why it doesn't work
-/*
-var spans = document.getElementsByTagName('span');
-var imgs = document.getElementsByTagName('img');
-var draggables = spans.concat(imgs);
-*/
-
 var draggables = new Array();
 var spans = document.getElementsByTagName('span');
 var imgs = document.images;
 for(var k = 0; k < spans.length; k++)
-{
 	draggables.push(spans[k]);
-}
 for(var j = 0; j < imgs.length; j++)
-{
 	draggables.push(imgs[j]);
-}
 
 for(var i = 0; i < draggables.length; i++)
 {
@@ -54,13 +43,6 @@ for(var i = 0; i < draggables.length; i++)
 			event.dataTransfer.setData("text/plain", event.target.innerText || event.target.textContent);
 
 		dnd_successful = false;
-	});
-
-	draggables[i].addEventListener('drag', function(event){
-		/*
-		 * This event is called permanently while the 
-		 * draggable element is moved by the user.
-		 */
 	});
 
 	draggables[i].addEventListener('dragend', function(event){
