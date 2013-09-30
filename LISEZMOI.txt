@@ -3,4 +3,4 @@ SoDnd
 SoDnD vous propose une implémentation minimale de la fonctionnalité HTML5 "Drag & Drop".
 
 Pour l'essayer il vous suffit de télécharger le projet où vous le souhaitez sur votre
-machine, puis de cliquer sur index.html.
+machine, puis d'ouvrir le fichier index.html sur votre navigateur.
