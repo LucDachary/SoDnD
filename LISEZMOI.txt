@@ -1,4 +1,5 @@
 SoDnd
+===
 
 SoDnD vous propose une implémentation minimale de la fonctionnalité HTML5 "Drag & Drop".
 
